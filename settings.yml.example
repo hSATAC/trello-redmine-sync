@@ -1,0 +1,8 @@
+trello:
+  public_key: ''
+  member_token: ''
+  board_id: ''
+
+redmine:
+  url: ''
+  token: ''
