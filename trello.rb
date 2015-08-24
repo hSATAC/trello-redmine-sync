@@ -20,7 +20,8 @@ board.cards.each do |card|
     if issue
       puts "Updating ##{issue.issue[:id]} #{issue.issue[:subject]}"
       card.name = "##{issue.issue[:id]} #{issue.issue[:subject]}"
-      card.desc = issue.issue[:description] + "\n\n" + "#{Settings.redmine.url.gsub(/\/$/,'')}/issues/#{issue.issue[:id]}"
+      desc = issue.issue[:description] || ""
+      card.desc = desc + "\n\n" + "#{Settings.redmine.url.gsub(/\/$/,'')}/issues/#{issue.issue[:id]}"
       card.save
     end
   end
