@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 require 'trello'
 require 'redmine-ruby'
 require 'config'
