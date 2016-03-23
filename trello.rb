@@ -27,7 +27,7 @@ board.cards.each do |card|
     issue      = redmine.issues.find($1)
     components = card.name.split("##{issue.issue[:id]}")
     appendix   = components[0]
-    title      = components[1]
+    title      = components[1] || ""
     if issue && (title.strip != issue.issue[:subject] || card.desc != desc_with_url(issue))
       puts "Updating ##{issue.issue[:id]} #{issue.issue[:subject]}"
       card.name = "#{appendix} ##{issue.issue[:id]} #{issue.issue[:subject]}".strip
