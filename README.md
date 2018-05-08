@@ -2,6 +2,12 @@
 
 This script grabs trello card names and fetch data from redmine, update info to trello.
 
+## NOTICE
+
+This project is no longer maintained.
+
+https://github.com/hiroshiyui/redmine-trello-card-sync is a recommended alternative.
+
 ## How to get trello token
 
 Basic authorization:
